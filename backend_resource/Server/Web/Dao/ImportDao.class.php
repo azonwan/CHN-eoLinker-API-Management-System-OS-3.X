@@ -161,7 +161,7 @@ class ImportDao
 
 								if ($db -> getAffectRow() < 1)
 									throw new \PDOException("addApi error");
-							};
+							}
 						}
 
 						// 插入api缓存数据用于导出
@@ -296,8 +296,8 @@ class ImportDao
 
 											if ($db -> getAffectRow() < 1)
 												throw new \PDOException("addChildParamValue error");
-										}
-									}
+										};
+									};
 
 									// 插入api缓存数据用于导出
 									$db -> prepareExecute("INSERT INTO eo_api_cache (eo_api_cache.projectID,eo_api_cache.groupID,eo_api_cache.apiID,eo_api_cache.apiJson,eo_api_cache.starred) VALUES (?,?,?,?,?);", array(
@@ -561,13 +561,10 @@ class ImportDao
 
 											if ($db -> getAffectRow() < 1)
 												throw new \PDOException("addApi error");
-										}
+										};
 									}
-								}
+								};
 							}
-
-							if ($db -> getAffectRow() < 1)
-								throw new \PDOException("addMockCode error");
 
 							// 插入api缓存数据用于导出
 							$db -> prepareExecute("INSERT INTO eo_api_cache (eo_api_cache.projectID,eo_api_cache.groupID,eo_api_cache.apiID,eo_api_cache.apiJson,eo_api_cache.starred) VALUES (?,?,?,?,?);", array(

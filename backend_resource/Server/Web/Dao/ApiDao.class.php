@@ -271,7 +271,6 @@ class ApiDao
 
             $db->prepareExecute('DELETE FROM eo_api_cache WHERE eo_api_cache.apiID = ?;', array($apiID));
             $db->prepareExecute('DELETE FROM eo_api_header WHERE eo_api_header.apiID = ?;', array($apiID));
-            $db->prepareExecute('DELETE FROM eo_api_mock WHERE eo_api_mock.apiID = ?;', array($apiID));
             $db->prepareExecute('DELETE FROM eo_api_request_param WHERE eo_api_request_param.apiID = ?;', array($apiID));
             $db->prepareExecute('DELETE FROM eo_api_result_param WHERE eo_api_result_param.apiID = ?;', array($apiID));
 
